@@ -388,6 +388,7 @@ public class Cache71Dialect extends Dialect {
 	@SuppressWarnings("StringBufferReplaceableByString")
 	public String getAddForeignKeyConstraintString(
 			String constraintName,
+			String foreignKeyDefinition,
 			String[] foreignKey,
 			String referencedTable,
 			String[] primaryKey,
