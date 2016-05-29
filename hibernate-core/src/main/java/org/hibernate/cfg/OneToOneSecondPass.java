@@ -256,6 +256,7 @@ public class OneToOneSecondPass implements SecondPass {
 				}
 				else {
 					value.setForeignKeyName( StringHelper.nullIfEmpty( jpaFk.name() ) );
+					value.setForeignKeyDefinition( StringHelper.nullIfEmpty( jpaFk.foreignKeyDefinition() ) );
 				}
 			}
 		}

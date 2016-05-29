@@ -2919,6 +2919,7 @@ public final class AnnotationBinder {
 			}
 			else if ( joinColumn != null ) {
 				value.setForeignKeyName( StringHelper.nullIfEmpty( joinColumn.foreignKey().name() ) );
+				value.setForeignKeyDefinition( StringHelper.nullIfEmpty( joinColumn.foreignKey().foreignKeyDefinition() ) );
 			}
 		}
 
