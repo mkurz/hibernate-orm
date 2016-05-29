@@ -246,9 +246,7 @@ public class OneToOneSecondPass implements SecondPass {
 			}
 		}
 
-		final ForeignKey fk = inferredData.getProperty().getAnnotation( ForeignKey.class );
-		if ( fk != null && !BinderHelper.isEmptyAnnotationValue( fk.name() ) ) {
-			value.setForeignKeyName( fk.name() );
+		if ( false ) {
 		}
 		else {
 			final javax.persistence.ForeignKey jpaFk = inferredData.getProperty().getAnnotation( javax.persistence.ForeignKey.class );

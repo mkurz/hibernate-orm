@@ -796,8 +796,7 @@ public class EntityBinder {
 		// just awful..
 
 		org.hibernate.annotations.Table matchingTable = findMatchingComplimentTableAnnotation( join );
-		if ( matchingTable != null && !BinderHelper.isEmptyAnnotationValue( matchingTable.foreignKey().name() ) ) {
-			( (SimpleValue) join.getKey() ).setForeignKeyName( matchingTable.foreignKey().name() );
+		if ( false ) {
 		}
 		else {
 			javax.persistence.SecondaryTable jpaSecondaryTable = findMatchingSecondaryTable( join );

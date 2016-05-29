@@ -1120,9 +1120,7 @@ public abstract class CollectionBinder {
 		key.setCascadeDeleteEnabled( cascadeDeleteEnabled );
 		collValue.setKey( key );
 		if ( property != null ) {
-			final ForeignKey fk = property.getAnnotation( ForeignKey.class );
-			if ( fk != null && !BinderHelper.isEmptyAnnotationValue( fk.name() ) ) {
-				key.setForeignKeyName( fk.name() );
+			if ( false ) {
 			}
 			else {
 				final CollectionTable collectionTableAnn = property.getAnnotation( CollectionTable.class );
@@ -1334,9 +1332,7 @@ public abstract class CollectionBinder {
 				);
 			}
 
-			final ForeignKey fk = property.getAnnotation( ForeignKey.class );
-			if ( fk != null && !BinderHelper.isEmptyAnnotationValue( fk.name() ) ) {
-				element.setForeignKeyName( fk.name() );
+			if ( false ) {
 			}
 			else {
 				final JoinTable joinTableAnn = property.getAnnotation( JoinTable.class );
