@@ -140,6 +140,7 @@ public class SAPDBDialect extends Dialect {
 	@Override
 	public String getAddForeignKeyConstraintString(
 			String constraintName,
+			String foreignKeyDefinition,
 			String[] foreignKey,
 			String referencedTable,
 			String[] primaryKey,
