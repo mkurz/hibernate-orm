@@ -651,10 +651,6 @@ public final class AnnotationBinder {
 				final JoinedSubclass jsc = ( JoinedSubclass ) persistentClass;
 				SimpleValue key = new DependantValue( context.getMetadataCollector(), jsc.getTable(), jsc.getIdentifier() );
 				jsc.setKey( key );
-				ForeignKey fk = clazzToProcess.getAnnotation( ForeignKey.class );
-				if ( fk != null && !BinderHelper.isEmptyAnnotationValue( fk.name() ) ) {
-					key.setForeignKeyName( fk.name() );
-				}
 				if ( onDeleteAnn != null ) {
 					key.setCascadeDeleteEnabled( OnDeleteAction.CASCADE.equals( onDeleteAnn.action() ) );
 				}
@@ -2919,9 +2915,7 @@ public final class AnnotationBinder {
 			value.setForeignKeyName( "none" );
 		}
 		else {
-			final ForeignKey fk = property.getAnnotation( ForeignKey.class );
-			if ( fk != null && StringHelper.isNotEmpty( fk.name() ) ) {
-				value.setForeignKeyName( fk.name() );
+			if ( false ) {
 			}
 			else if ( joinColumn != null ) {
 				value.setForeignKeyName( StringHelper.nullIfEmpty( joinColumn.foreignKey().name() ) );
